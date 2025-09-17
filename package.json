@@ -2,6 +2,7 @@
     "name": "com.tailspin96.smoothuilayouts",
     "version": "1.0.3",
     "displayName": "Smooth UI Layouts",
+	"description": "Smooth UI Layouts for Unity",
     "author": {
         "name": "Tailspin96"
     }
