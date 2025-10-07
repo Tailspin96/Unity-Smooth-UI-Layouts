@@ -1,11 +1,11 @@
 using UnityEngine;
 
-namespace Tailspin96.SmoothUILayouts
+namespace Tailspin96.SmoothUILayouts.Core
 {
     public class ItemFollowClone : MonoBehaviour
     {
         public Transform cloneTransform;
-        public SmoothGridLayout smoothLayout;
+        public ISmoothLayout smoothLayout;
 
         private Vector3 velocity = Vector3.zero;
 

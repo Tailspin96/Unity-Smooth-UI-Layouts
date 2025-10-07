@@ -1,0 +1,16 @@
+{
+    "name": "Tailspin96.SmoothUILayouts.Layouts",
+    "rootNamespace": "Tailspin96.SmoothUILayouts",
+    "references": [
+        "Tailspin96.SmoothUILayouts.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

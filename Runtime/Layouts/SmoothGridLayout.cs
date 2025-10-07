@@ -1,10 +1,11 @@
 using System;
+using Tailspin96.SmoothUILayouts.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Tailspin96.SmoothUILayouts
+namespace Tailspin96.SmoothUILayouts.Layouts
 {
-    public class SmoothGridLayout : MonoBehaviour
+    public class SmoothGridLayout : MonoBehaviour, ISmoothLayout
     {
         [Range(0, 100f)]
         [Tooltip("Set the speed that items move to their new spots.")]
@@ -18,14 +19,17 @@ namespace Tailspin96.SmoothUILayouts
         [Space(10)]
         [SerializeField] private GridLayoutGroup grid;
 
+        ItemHolderManager holderManager;
+
         private void Awake()
         {
-            ItemHolderManager.ItemLayoutChanged += CreateLayout;
+            holderManager = itemHolder.GetComponent<ItemHolderManager>();
+            ItemHolderManager.ItemLayoutChanged += OnLayoutChnaged;
         }
 
         private void OnDestroy()
         {
-            ItemHolderManager.ItemLayoutChanged -= CreateLayout;
+            ItemHolderManager.ItemLayoutChanged -= OnLayoutChnaged;
         }
 
         private void Start()
@@ -33,8 +37,14 @@ namespace Tailspin96.SmoothUILayouts
             CreateLayout();
         }
 
+        private void OnLayoutChnaged(ItemHolderManager sender)
+        {
+            if (sender == holderManager) CreateLayout();
+        }
+
         private void CreateLayout()
         {
+
             for (int i = cloneHolder.childCount - 1; i >= 0; i--)
             {
                 DestroyImmediate(cloneHolder.GetChild(i).gameObject);
