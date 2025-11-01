@@ -1,3 +1,8 @@
+## [1.1.0] - 01/11/2025
+
+- Added support for smooth horizontal and vertical layouts.
+- Added prefabs for all smooth layouts.
+
 ## [1.0.4] - 07/10/2025
 
 - Layout refreshes now only affect the specific smooth layout instance that was modified.

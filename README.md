@@ -3,12 +3,11 @@
 A package that adds smooth UI layouts to Unity by using clones to move elements to new positions.
 ## Features
 
-Currently Added Features
+Currently Supported Features
  - Grid Layouts
+ - Horizontal Layouts
+ - Vertical Layouts
 
-### Planned
- - Horizontal
- - Vertical
 ## Installation
 
 Install using Unity Package Manager (UPM)
